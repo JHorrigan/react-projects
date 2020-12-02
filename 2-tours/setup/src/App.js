@@ -13,6 +13,11 @@ function App() {
       </main>
     );
   }
+  return (
+    <main>
+      <Tours />
+    </main>
+  );
   
   return <h2>Tours Project Setup</h2>
 }

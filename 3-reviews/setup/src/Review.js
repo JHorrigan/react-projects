@@ -6,6 +6,13 @@ const Review = () => {
   const [index, setIndex] = useState(0);
   const {name, job, image, text} = people[index];
 
+  const nextPerson = () => {
+    setIndex((index) => {
+      let newIndex = index + 1;
+      return newIndex;
+    });
+  }
+
   const prevPerson = () => {
     setIndex((index) => {
       let newIndex = index - 1;
@@ -28,7 +35,7 @@ const Review = () => {
         <button className="prev-btn" onClick={prevPerson}>
           <FaChevronLeft />
         </button>
-        <button className="next-btn">
+        <button className="next-btn" onClick={nextPerson}>
           <FaChevronRight />
         </button>
       </div>

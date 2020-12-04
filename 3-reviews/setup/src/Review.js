@@ -20,6 +20,9 @@ const Review = () => {
         <button className="prev-btn">
           <FaChevronLeft />
         </button>
+        <button className="next-btn">
+          <FaChevronRight />
+        </button>
       </div>
     </article>
   );

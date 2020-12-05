@@ -10,7 +10,7 @@ function App() {
         <section className="info">
           {
             questions.map((question) => {
-              return <SingleQuestion />
+              return <SingleQuestion question={question} />
             })
           }
         </section>

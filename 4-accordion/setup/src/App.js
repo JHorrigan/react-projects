@@ -8,6 +8,11 @@ function App() {
       <div className="container">
         <h3>questions and answers about login</h3>
         <section className="info">
+          {
+            questions.map((question) => {
+              return <SingleQuestion />
+            })
+          }
         </section>
       </div>
     </main>

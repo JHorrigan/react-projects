@@ -1,7 +1,13 @@
 import React from 'react';
 
 const Menu = ({items}) => {
-  return <h2>menu component</h2>;
+  return (
+    <div className="section-center">
+      {items.map((menuItem) => {
+        const {id, title, img, desc} = menuItem;     
+      })}
+    </div>
+  );
 };
 
 export default Menu;

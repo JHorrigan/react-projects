@@ -17,6 +17,14 @@ function App() {
     fetchJobs();
   }, []);
 
+  if (loading) {
+    return (
+      <section>
+        <h1>loading...</h1>
+      </section>
+    );
+  }
+
   return <h2>tabs project setup</h2>
 }
 

@@ -28,6 +28,9 @@ function App() {
         <button className="prev">
           <FiChevronLeft />
         </button>
+        <button className="next">
+          <FiChevronRight />
+        </button>
       </div>
     </section>
   );

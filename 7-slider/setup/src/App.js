@@ -20,6 +20,7 @@ function App() {
     let slider = setInterval(() => {
       setIndex(index + 1);
     }, 3000);
+    return () => clearInterval(slider);
   }, [index]);
 
   return (

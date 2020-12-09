@@ -21,6 +21,10 @@ function App() {
         onChange={(e) => setCount(e.target.value)}/>
         <button type="submit" className="btn">generate</button>
       </form>
+      <article className="lorem-text">
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+      </article>
     </section>
   );
 }

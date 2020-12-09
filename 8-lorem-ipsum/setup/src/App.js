@@ -16,7 +16,9 @@ function App() {
         <label htmlFor="amount">
           paragraphs:
         </label>
-        <input type="number" name="amount" id="amount" value={count}></input>
+        <input type="number" name="amount" id="amount" value=
+        {count}
+        onChange={(e) => setCount(e.target.value)}/>
       </form>
     </section>
   );

@@ -6,7 +6,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('form submit');
+    setText(data);
   }
 
   return (
@@ -22,8 +22,11 @@ function App() {
         <button type="submit" className="btn">generate</button>
       </form>
       <article className="lorem-text">
-        <p>lorem ipsum</p>
-        <p>lorem ipsum</p>
+        {text.map((item, index) => {
+          return (
+            <p key={index}>{item}</p>
+          );
+        })}
       </article>
     </section>
   );

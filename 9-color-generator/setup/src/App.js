@@ -10,7 +10,8 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submit');
+    let colors = new Values(color).all(10);
+    console.log(colors);
   }
 
   return (

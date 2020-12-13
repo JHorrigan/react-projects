@@ -8,7 +8,21 @@ function App() {
   const [error, setError] = useState(false);
   const [list, setList] = useState([]);
 
-  return <h2>color generator project</h2>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('submit');
+  }
+
+  return (
+    <>
+    <section className="container">
+      <h3>color generator</h3>
+    </section>
+    <section className="colors">
+      <h4>colors list</h4>
+    </section>
+    </>
+  );
 }
 
 export default App

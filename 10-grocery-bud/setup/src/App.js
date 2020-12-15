@@ -13,7 +13,17 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submit');
+    if (!name) {
+      // Display alert
+    } else if (name && isEditing) {
+      // Deal with edit
+    } else {
+      // Show alert
+      const newItem = {id: new Date().getTime().toString(),
+        title: name}
+      setList([...list, newItem]);
+      setName("");
+    }
   }
 
   return (

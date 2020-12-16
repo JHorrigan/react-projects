@@ -23,6 +23,10 @@ function App() {
         }
         return item;
       }));
+      setName("");
+      setEditID(null);
+      setIsEditing(false);
+      showAlert(true, "success", "value changed");
     } else {
       showAlert(true, "success", "item added to the list");
       const newItem = {id: new Date().getTime().toString(),
@@ -52,6 +56,10 @@ function App() {
     setEditID(id);
     setName(specificItem.title);
   }
+
+  useEffect(() => {
+    localStorage.setItem('list', JSON.stringify(list))
+  }, [list]);
 
   return (
     <section className="section-center">

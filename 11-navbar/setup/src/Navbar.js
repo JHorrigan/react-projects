@@ -5,7 +5,7 @@ import logo from './logo.svg'
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const linksContainer = useRef(null);
+  const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
   return (
     <nav>
@@ -17,8 +17,9 @@ const Navbar = () => {
             <FaBars />
           </button>
         </div>
-        <div className="links-container">
-          <ul className="links">
+        <div className="links-container" ref=
+          {linksContainerRef}>
+          <ul className="links" ref={linksRef}>
             {links.map((link) => {
               const {id, url, text} = link;
               return (

@@ -8,7 +8,13 @@ const Sidebar = () => {
 
   return (
     <aside className={`${isSidebarOpen ? "sidebar-wrapper show"
-    : "sidebar-wrapper"}`}>sidebar component</aside>
+    : "sidebar-wrapper"}`}>
+      <div className="sidebar">
+        <button className="close-btn" onClick={closeSidebar}>
+          <FaTimes />
+        </button>
+      </div>
+    </aside>
   )
 }
 

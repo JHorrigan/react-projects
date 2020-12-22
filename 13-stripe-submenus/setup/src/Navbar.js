@@ -8,15 +8,21 @@ const Navbar = () => {
     closeSubmenu } = useGlobalContext();
 
   const displaySubmenu = (e) => {
-    const page = e.target.textContext;
+    const page = e.target.textContent;
     const tempBtn = e.target.getBoundingClientRect();
     const center = (tempBtn.left + tempBtn.right) / 2;
     const bottom = tempBtn.bottom - 3;
     openSubmenu(page, { center, bottom });
   }
 
+  const handleSubmenu = (e) => {
+    if (!e.target.classList.contains("link-btn")) {
+      closeSubmenu();
+    }
+  }
+
   return (
-    <nav className="nav">
+    <nav className="nav" onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="stripe" />

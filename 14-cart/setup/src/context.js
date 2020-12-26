@@ -32,6 +32,13 @@ const AppProvider = ({ children }) => {
     dispatch({type:'DECREASE', payload:id})
   }
 
+  const fetchData = () => {
+    dispatch({type: 'LOADING'})
+    const response = await fetch(url);
+    const cart = response.json();
+    dispatch({type: 'DISPLAY_ITEMS', payload:cart})
+  }
+
   useEffect(() => {
     dispatch({type: 'GET_TOTALS'})
   }, [state.cart])

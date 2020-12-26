@@ -32,7 +32,7 @@ const AppProvider = ({ children }) => {
     dispatch({type:'DECREASE', payload:id})
   }
 
-  const fetchData = () => {
+  const fetchData = async () => {
     dispatch({type: 'LOADING'})
     const response = await fetch(url);
     const cart = response.json();

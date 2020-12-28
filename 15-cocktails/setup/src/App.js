@@ -12,6 +12,11 @@ function App() {
     <div>
       <Router>
         <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
       </Router>
     </div>
   )

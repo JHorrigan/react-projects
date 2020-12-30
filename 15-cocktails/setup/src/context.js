@@ -6,7 +6,7 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('a');
+  const [searchTerm, setSearchTerm] = useState('azzzzz');
   const [cocktails,setCocktails] = useState([]);
 
   const fetchDrinks = async () => {
@@ -19,7 +19,7 @@ const AppProvider = ({ children }) => {
         console.log(drinks);
       }
       else {
-        setCocktails = [];
+        setCocktails([]);
       }
     } catch (error) {
       console.log(error);

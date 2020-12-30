@@ -20,6 +20,10 @@ const AppProvider = ({ children }) => {
     }
   }
 
+  useEffect(() => {
+    fetchDrinks();
+  }, [searchTerm])
+
   return (
     <AppContext.Provider 
       value={{

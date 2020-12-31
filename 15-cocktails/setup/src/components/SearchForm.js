@@ -12,7 +12,7 @@ const SearchForm = () => {
           <label htmlFor="name">
             search your favourite cocktail
           </label>
-          <input type="text" id="name" />
+          <input type="text" id="name" ref={searchValue} />
         </div>
       </form>
     </section>

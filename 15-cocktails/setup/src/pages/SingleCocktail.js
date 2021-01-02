@@ -17,6 +17,7 @@ const SingleCocktail = () => {
         console.log(data);
       } catch (error) {}
     };
+    getCocktail();
   }, [id])
 
   return (

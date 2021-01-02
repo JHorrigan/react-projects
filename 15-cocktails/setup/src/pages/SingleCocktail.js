@@ -61,7 +61,7 @@ const SingleCocktail = () => {
   if(loading) {
     return <Loading />
   }
-
+  console.log(cocktail);
   if(!cocktail) {
     return (
       <h2 className="section-title">
@@ -77,14 +77,16 @@ const SingleCocktail = () => {
       glass,
       instructions,
       ingredients,
-    } = cocktail
-  }
+    } = cocktail;
 
-  return (
-    <div>
-      <h2>{id}</h2>
-    </div>
-  )
+    return (
+      <section className='section cocktail-section'>
+        <Link to='/' className='btn btn-primary'>
+        back home
+        </Link>
+      </section>
+    )
+  }
 }
 
 export default SingleCocktail

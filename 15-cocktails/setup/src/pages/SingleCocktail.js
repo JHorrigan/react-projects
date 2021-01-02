@@ -68,6 +68,16 @@ const SingleCocktail = () => {
         no cocktail to display
       </h2>
     )
+  } else {
+    const {
+      name,
+      image,
+      category,
+      info,
+      glass,
+      instructions,
+      ingredients,
+    } = cocktail
   }
 
   return (
